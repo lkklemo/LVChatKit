@@ -130,6 +130,8 @@
 		84A8FE101DEB321F00D6978F /* MLLinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A8FE041DEB321F00D6978F /* MLLinkLabel.m */; };
 		84A8FE111DEB321F00D6978F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 84A8FE051DEB321F00D6978F /* LICENSE */; };
 		84A8FE121DEB321F00D6978F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 84A8FE061DEB321F00D6978F /* README.md */; };
+		84F8807C1DEB3E3E000E89CE /* LVLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F8807B1DEB3E3E000E89CE /* LVLoginController.m */; };
+		84F8807F1DEB40CF000E89CE /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F8807E1DEB40CF000E89CE /* UIViewExt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -373,6 +375,10 @@
 		84A8FE041DEB321F00D6978F /* MLLinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLinkLabel.m; sourceTree = "<group>"; };
 		84A8FE051DEB321F00D6978F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		84A8FE061DEB321F00D6978F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		84F8807A1DEB3E3E000E89CE /* LVLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVLoginController.h; sourceTree = "<group>"; };
+		84F8807B1DEB3E3E000E89CE /* LVLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVLoginController.m; sourceTree = "<group>"; };
+		84F8807D1DEB40CF000E89CE /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		84F8807E1DEB40CF000E89CE /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		CE5A367FE1C6B9BC7A3AB600 /* Pods-LVChatKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LVChatKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LVChatKit/Pods-LVChatKit.debug.xcconfig"; sourceTree = "<group>"; };
 		D5AD68B0F1768E0649DD2F92 /* libPods-LVChatKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LVChatKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91829968181C6B34F422EC2 /* Pods-LVChatKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LVChatKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LVChatKit/Pods-LVChatKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -437,6 +443,7 @@
 		84A8FC8C1DEB314D00D6978F /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				84F880761DEB3E15000E89CE /* Login */,
 				84A8FC8D1DEB314D00D6978F /* Home */,
 				84A8FC911DEB314D00D6978F /* Lib */,
 			);
@@ -477,6 +484,8 @@
 		84A8FC911DEB314D00D6978F /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				84F8807D1DEB40CF000E89CE /* UIViewExt.h */,
+				84F8807E1DEB40CF000E89CE /* UIViewExt.m */,
 				84A8FDEB1DEB321F00D6978F /* MLLabel */,
 				84A8FC921DEB317900D6978F /* LCChatKit.h */,
 				84A8FC931DEB317900D6978F /* LCChatKit.m */,
@@ -1023,6 +1032,39 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		84F880761DEB3E15000E89CE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84F880771DEB3E15000E89CE /* Controller */,
+				84F880781DEB3E15000E89CE /* Model */,
+				84F880791DEB3E15000E89CE /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		84F880771DEB3E15000E89CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84F8807A1DEB3E3E000E89CE /* LVLoginController.h */,
+				84F8807B1DEB3E3E000E89CE /* LVLoginController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84F880781DEB3E15000E89CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84F880791DEB3E15000E89CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A7B3A505045F73527F5C428C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1222,10 +1264,12 @@
 				84A8FDDB1DEB317A00D6978F /* LCCKCaptionView.m in Sources */,
 				84A8FD961DEB317A00D6978F /* LCCKImageManager.m in Sources */,
 				84A8FDAC1DEB317A00D6978F /* LCCKProgressHUD.m in Sources */,
+				84F8807C1DEB3E3E000E89CE /* LVLoginController.m in Sources */,
 				84A8FE0F1DEB321F00D6978F /* MLLabel.m in Sources */,
 				84A8FDDC1DEB317A00D6978F /* LCCKPhoto.m in Sources */,
 				84A8FDD41DEB317A00D6978F /* LCCKUIService.m in Sources */,
 				84A8FD931DEB317A00D6978F /* LCCKTextFullScreenViewController.m in Sources */,
+				84F8807F1DEB40CF000E89CE /* UIViewExt.m in Sources */,
 				84A8FDA71DEB317A00D6978F /* LCCKFacePageView.m in Sources */,
 				84A8FD971DEB317A00D6978F /* LCCKWeakReference.m in Sources */,
 				84A8FDE61DEB317A00D6978F /* Mp3Recorder.m in Sources */,

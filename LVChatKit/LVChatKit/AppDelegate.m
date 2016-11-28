@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "LCChatKit.h"
+#import "LVLoginController.h"
+NSString * const KH_LEANCLOUD_APPID = @"gEtvkdqzdAS0sAvjVswOoYFx-gzGzoHsz";
+NSString * const KH_LEANCLOUD_APPKEY = @"pM7NC54JN0pVOnjiwF1doXUX";
 
 @interface AppDelegate ()
 
@@ -16,10 +20,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self setupLeanCloudIM];
+    self.window.rootViewController = [LVLoginController new];
     return YES;
 }
-
+#pragma mark APNS
+- (void)setupLeanCloudIM
+{
+    [AVOSCloud setApplicationId:KH_LEANCLOUD_APPID clientKey:KH_LEANCLOUD_APPKEY];
+    [AVOSCloud setAllLogsEnabled:YES];
+//    [AVOSCloud registerForRemoteNotification];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
